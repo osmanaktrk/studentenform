@@ -24,45 +24,51 @@ body{
     display: inline-block;
     width: 700px;
     padding: 50px;
-    text-align: center;
     background-color: rgba(228,228,228, 0.5);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     backdrop-filter: blur(10px);
 }
 
+#main-text{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color:#451829;
+
+}
 
 
-input{
+/* input{
     margin: 10px;
     padding: 10px;
     border: transparent;
     border-radius: 25px;
     width: 200px;
-}
+} */
 
-#e-mail, #password, #password-check{
+/* #e-mail, #password, #password-check{
     width: 420px;
-}
+} */
 
-button{
+/* button{
     padding: 10px;
     width: 200px;
     background-color: rgb(49,179,175);
     border: transparent;
     border-radius: 20px;
-}
-input:focus{
+} */
+/* input:focus{
     box-shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px, rgba(0, 0, 0, 0.5) 0px -12px 30px, rgba(0, 0, 0, 0.5) 0px 4px 6px, rgba(0, 0, 0, 0.5) 0px 12px 13px, rgba(0, 0, 0, 0.5) 0px -3px 5px;
 
-}
-button:hover{
+} */
+/* button:hover{
     background-color: red;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px, rgba(0, 0, 0, 0.5) 0px -12px 30px, rgba(0, 0, 0, 0.5) 0px 4px 6px, rgba(0, 0, 0, 0.5) 0px 12px 13px, rgba(0, 0, 0, 0.5) 0px -3px 5px;
-}
-button:active{
+} */
+/* button:active{
     transform: translateY(4px);
-}
-img{
+} */
+.ehb-logo{
     display: none;
 }
 @media screen and (max-width:800px) {
@@ -76,7 +82,7 @@ img{
         border: transparent;
         border-radius: 50px;
         display: inline-block;
-        width: 300px;
+        width: auto;
         padding: 50px;
         text-align: center;
         background-color: rgba(228,228,228, 0.5);
@@ -84,10 +90,10 @@ img{
         backdrop-filter: blur(10px);
     }
    
-    #e-mail, #password, #password-check{
+    /* #e-mail, #password, #password-check{
         width: 200px;
-    }
-    img{
+    } */
+    .ehb-logo{
         display: inline-block;
         width: 140px;
         margin-bottom: 15px;
