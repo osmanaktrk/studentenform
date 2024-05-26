@@ -14,17 +14,13 @@
 
     <x-app-layout>
         <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Profile') }}
-            </h2>
             @if (session('status'))
-            <h2 class="font-semibold text-xl text-green-800 leading-tight">
-                {{ session('status') }}
-            </h2>
+                <h2 x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 5000)"
+                    class="text-xl text-green-600">{{ session('status') }}</h2>
             @endif
-
-
         </x-slot>
+
+
 
 
 
@@ -50,7 +46,7 @@
 
 
                 <div class="delete box p-4 sm:p-8  shadow sm:rounded-lg">
-              
+
 
                     @include('profile.partials.update-education-form')
                     @include('profile.partials.delete-user-form')

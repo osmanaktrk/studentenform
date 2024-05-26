@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+
 
 class UserController extends Controller
 {
@@ -13,7 +15,7 @@ class UserController extends Controller
      */
     public function photoUpload(Request $request){
         $request->validate([
-            'photo' => 'max:5120',
+            'photo' => ['required', 'max:5120', 'extensions:jpg, jpeg, png, bmp, gif, svg, webp']
         ]);
 
         $imgname = Auth::user()->email;
@@ -30,6 +32,9 @@ class UserController extends Controller
     }
 
     public function photoDelete(){
+        
+        File::delete(Auth::user()->profile_photo_path);
+
         User::where('id', Auth::user()->id)->update([
             'profile_photo_path' => 'img/users/default.svg',
         ]);
@@ -42,7 +47,9 @@ class UserController extends Controller
     public function educationUpdate(Request $request){
 
         $request->validate([
-            "education_year" => "digits:1"
+            'education_type' => 'required',
+            'education_name' => 'required',
+            "education_year" => ['required', 'digits:1'],
         ]);
 
         User::where('id', Auth::user()->id)->update([

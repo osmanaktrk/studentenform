@@ -81,21 +81,7 @@
 
 
 
-        {{-- <form action="" method="">
-            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
-            <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
-            <br>
-            <input type="text" name="username" id="username" placeholder="User Name">
-            <br>
-            <input type="email" name="e-mail" id="e-mail" placeholder="E-mail adress" required>
-            <br>
-            <input type="password" name="password" id="password" placeholder="Enter Password" required>
-            <br>
-            <input type="password" name="password-check" id="password-check" placeholder="Confirm Password" required>
-            <br>
-            <br>
-            <button type="submit">SIGN UP</button>
-        </form> --}}
+ 
     </div>
     
 </body>

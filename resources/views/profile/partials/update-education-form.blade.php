@@ -186,7 +186,7 @@
                 <x-input-error :messages="$errors->get('education_year')" class="mt-2" />
                 <x-primary-button>{{ __('Save') }}</x-primary-button>
                 @if (session('status') === 'Education Informations Updated')
-                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 5000)"
                         class="text-xl text-green-600">{{ __('Saved') }}</p>
                 @endif
             </div>

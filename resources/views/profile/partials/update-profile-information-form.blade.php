@@ -74,20 +74,25 @@
 
             <div>
                 <x-input-label :value="__('Education')" />
-                <input class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" value="{{Auth::user()->education_type}}"/>
-                <input class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" value="{{Auth::user()->education_name}}"/>
-                <input class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" value="{{Auth::user()->education_year}}"/>
+                <input readonly class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" value="{{Auth::user()->education_type}}"/>
+                <input readonly class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" value="{{Auth::user()->education_name}}"/>
+                <input readonly class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" value="{{Auth::user()->education_year}}"/>
             </div>
-
-
+            
             <div class="flex items-center justify-center gap-4">
                 <x-primary-button>{{ __('Save') }}</x-primary-button>
 
                 @if (session('status') === 'profile-updated')
-                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 5000)"
                         class="text-xl text-green-600">{{ __('Saved') }}</p>
                 @endif
             </div>
+
+            
+
+
+            
+
         </form>
         
         

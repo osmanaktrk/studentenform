@@ -1,12 +1,12 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="pb-5 pt-5 bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                <div class="shrink-0 flex items-center" >
+                    <a href="{{ route('welcome') }}">
+                        <img src="{{asset('img/ehb_logos/horizontaal_EhB-logo_(transparante_achtergrond).png')}} " alt="Ehb-logo" style="max-height:50px ">
                     </a>
                 </div>
 
@@ -16,12 +16,38 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('main')" :active="request()->routeIs('main')">
+                        {{ __('Main') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('topic.create')" :active="request()->routeIs('topic.create')">
+                        {{ __('Create Topic') }}
+                    </x-nav-link>
+                </div>
+
+
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+                        {{ __('Profile') }}
+                    </x-nav-link>
+                </div>
+
+
+
+
+
+
             </div>
 
             
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <a href="{{route('profile.edit')}} "><img src="{{Auth::user()->profile_photo_path}} " alt="profile photo" style="height: 40px; border: solid; border-radius:50%;"></a>
+                <a href="{{route('profile.edit')}} "><img src="{{asset(Auth::user()->profile_photo_path)}} " alt="profile photo" style="width:60px; height: 60px; border: solid; border-radius:50%;"></a>
                 
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">

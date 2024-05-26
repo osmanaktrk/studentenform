@@ -30,6 +30,7 @@ class User extends Authenticatable
         'education_year',
         'usertype',
         'is_banned',
+        'created_at',
     ];
 
     /**
@@ -53,5 +54,15 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function topics()
+    {
+        return $this->hasMany('App\Models\Topic');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Post');
     }
 }
