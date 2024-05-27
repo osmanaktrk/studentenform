@@ -1,13 +1,10 @@
-body{
+
+
+
+.create-pop{
     box-sizing: border-box;
-    background-image: url("../img/ehb_logos/EhB-logo-transparant.png");
-    /* background-image: url("../img/website.jpg"); */
-    background-color: rgb(228,228,228);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-        
+    width: 300px;
+    
 }
 
 .box{
@@ -18,16 +15,20 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    background-color: rgb(228,228,228) !important;
+    
 
 }
 
 .container{
-    padding: 50px;
+    padding: 50px;         
     border: solid 2px rgba(33, 32, 32, 0.486);
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.902);
 
 }
+
 
 
 #button{
@@ -69,7 +70,7 @@ body{
     font-size: 20px;
 }
 
-#category_coose{
+#category_choose{
     display: block;
     text-align: center;
     margin-bottom: 30px;
@@ -83,4 +84,24 @@ body{
     margin-top: 30px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
     font-size: 20px;
+}
+
+#close{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: solid 2px red;
+    border-radius: 10px;
+    background-color: red;
+    
+}
+
+#close:hover{
+    background-color: rgba(255, 0, 0, 0.800);
+    border: solid 2px rgba(255, 0, 0, 0.800);
+}
+
+#close:active{
+    transform: translateY(3px);
 }

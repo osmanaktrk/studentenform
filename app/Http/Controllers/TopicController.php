@@ -14,7 +14,7 @@ class TopicController extends Controller
      */
     public function index()
     {
-        return view('topic.create');
+        return view('topic/create');
     }
 
     /**
@@ -53,7 +53,7 @@ class TopicController extends Controller
         $post->save();
         
         
-        return redirect()->back()->with("status", "Topic Created");
+        return redirect()->route('main')->with("status", "Topic Created");
     }
     
 

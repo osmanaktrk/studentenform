@@ -13,16 +13,12 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    {{-- <style>
-        body {
-            background-color: rgb(228, 228, 228);
-        }
-    </style> --}}
-    <link rel="stylesheet" href="{{ asset('css/topic-create.css') }} ">
+    
+    <link rel="stylesheet" href="{{ asset('css/topic-create-pop.css') }} ">
     <title>Create Topic</title>
 </head>
 
-<body class="min-h-screen font-sans antialiased" style="width:100%;">
+<body class="create-pop font-sans antialiased">
 
 
 
@@ -36,10 +32,14 @@
                 <form action="{{ route('topic.create') }}" method="post">
                     @csrf
                     <div class="box p-4 sm:p-8  shadow sm:rounded-lg">
-                        
+                        <div id="close">
+                            <svg width="30" height="30" viewbox="0 0 40 40">
+                                <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" stroke-width="5" />
+                            </svg>
+                        </div>
                         <div class="container">
-                            
-                            <span id="category_coose">CHOOSE A CATEGORY</span>
+
+                            <span id="category_choose">CHOOSE A CATEGORY</span>
                             <div id="categories">
                                 <div class="radios">
                                     <label for="General"
@@ -191,7 +191,7 @@
 
 
 
-    <script src="{{ asset('js/topic-create.js') }} "></script>
+    <script src="{{ asset('js/topic-create-pop.js') }} "></script>
 </body>
 
 </html>
