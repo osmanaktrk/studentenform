@@ -1,13 +1,13 @@
 body{
 
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     background-image: url("../img/ehb_logos/EhB-logo-transparant.png");
-    /* background-image: url("../img/website.jpg"); */
+    background-image: url("../img/website.jpg");
     background-color: rgb(228,228,228);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     
     
 }
@@ -33,18 +33,19 @@ body{
 
 .container{
     padding: 50px;
-    
     border: solid 2px rgba(33, 32, 32, 0.486);
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.902);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
     
 }
 
 
 
 #profile-img{
-    height: 40%;
-    width: 40%;
+    width: 50%;
+    aspect-ratio: 1;
     border: solid 2px;
     border-radius: 50%;
 }

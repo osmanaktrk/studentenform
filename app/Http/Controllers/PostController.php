@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class PostController extends Controller
 {
@@ -15,12 +17,30 @@ class PostController extends Controller
         //
     }
 
+    public function showAll(){
+        $posts = Post::latest()->get();
+
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function postCreate($topicId , Request $request)
     {
-        //
+        $validated = $request->validate([
+            "post_title" => ["required", "min:5"],
+            "content" => ["required", "min:5"],
+        ]);
+        
+        $post = new Post();
+        $post->topic_id = $topicId;
+        $post->user_id = Auth::user()->id;
+        $post->title = $validated["post_title"];
+        $post->content = $validated["content"];
+        $post->save();
+        
+        return redirect()->back()->with("status", "Post Created");
     }
 
     /**
@@ -46,11 +66,28 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $post)
+    public function edit($postId, Request $request)
     {
-        //
+        $validated = $request->validate([
+            "post_title"=>["required", "min:5"],
+            "content" =>["required", "min:5"],
+        ]);
+
+        $post = Post::findOrFail($postId);
+        $post->title = $validated["post_title"];
+        $post->content = $validated["content"];
+        $post->save();
+
+        return redirect()->back()->with("status", "Post Edited");
     }
 
+    public function delete($postId){
+
+        Post::findOrFail($postId)->delete();
+
+        return redirect()->back()->with("status", "Post Deleted");
+
+    }
     /**
      * Update the specified resource in storage.
      */

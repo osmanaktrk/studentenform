@@ -28,21 +28,21 @@
             <div>
                 <x-input-label for="firstname" :value="__('First Name')" />
                 <x-text-input id="firstname" name="firstname" type="text" class="mt-1 block w-full" :value="old('firstname', $user->firstname)"
-                    required autofocus autocomplete="name" />
+                    required  autocomplete="name" />
                 <x-input-error class="mt-2" :messages="$errors->get('firstname')" />
             </div>
 
             <div>
                 <x-input-label for="lastname" :value="__('Last Name')" />
                 <x-text-input id="lastname" name="lastname" type="text" class="mt-1 block w-full" :value="old('lastname', $user->lastname)"
-                    required autofocus autocomplete="name" />
+                    required autocomplete="name" />
                 <x-input-error class="mt-2" :messages="$errors->get('lastname')" />
             </div>
 
             <div>
                 <x-input-label for="username" :value="__('User Name')" />
                 <x-text-input id="username" name="username" type="text" class="mt-1 block w-full" :value="old('username', $user->username)"
-                    required autofocus autocomplete="name" />
+                    required autocomplete="name" />
                 <x-input-error class="mt-2" :messages="$errors->get('username')" />
             </div>
 

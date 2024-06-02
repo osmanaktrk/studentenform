@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('profile_photo_path')->default('img/users/default.svg');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('education_type')->default('Update Education Information');
-            $table->string('education_name')->default('Update Education Information');
-            $table->string('education_year')->default('Update Education Information');
+            $table->string('education_type')->default('No Education Information, Please Update');
+            $table->string('education_name')->default('No Education Information, Please Update');
+            $table->string('education_year')->default('No Education Information, Please Update');
             $table->string('usertype')->default('user');
             $table->boolean('is_banned')->default(false);
             $table->rememberToken();

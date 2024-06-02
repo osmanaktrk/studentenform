@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function photoUpload(Request $request){
         $request->validate([
-            'photo' => ['required', 'max:5120', 'extensions:jpg, jpeg, png, bmp, gif, svg, webp']
+            'photo' => ['required', 'image', 'max:10240', 'extensions:jpg, jpeg, png, bmp, gif, svg, webp']
         ]);
 
         $imgname = Auth::user()->email;

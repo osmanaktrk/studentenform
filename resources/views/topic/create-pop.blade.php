@@ -32,7 +32,7 @@
                 <form action="{{ route('topic.create') }}" method="post">
                     @csrf
                     <div class="box p-4 sm:p-8  shadow sm:rounded-lg">
-                        <div id="close">
+                        <div id="popup-close">
                             <svg width="30" height="30" viewbox="0 0 40 40">
                                 <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" stroke-width="5" />
                             </svg>

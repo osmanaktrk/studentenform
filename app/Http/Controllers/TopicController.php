@@ -17,6 +17,28 @@ class TopicController extends Controller
         return view('topic/create');
     }
 
+    public function showAll(){
+        $topics = Topic::latest()->get();
+
+        return view('main', compact('topics'));
+    }
+
+    public function delete($topicId){
+        Topic::findOrFail($topicId)->delete();
+        Post::where('topic_id', $topicId)->delete();
+        return view('main')->with("status", "Topic Deleted");
+    }
+
+    public function topicShow($topicId){
+        $topic = Topic::findOrFail($topicId);
+
+        $posts = Post::where("topic_id", $topicId)->latest()->get();
+
+
+        return view('topic.index', compact('posts', 'topic'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */

@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('category')->default('General');
             $table->integer('user_id');
+            // $table->integer('post_id')->nullable();
+            // $table->integer('topicread_id')->nullable();
             $table->text('title');
             $table->timestamps();
         });
