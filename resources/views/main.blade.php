@@ -230,9 +230,7 @@
 
                         @endforeach
 
-                        <div class="topics"></div>
-                        <div class="topics"></div>
-                        <div class="topics"></div>
+                        
                         
                         
 

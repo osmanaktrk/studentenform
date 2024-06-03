@@ -1,9 +1,9 @@
-#body-main-conteiner{
+.body-main-conteiner{
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     padding: 50px;
 }
 
@@ -11,10 +11,12 @@
     border: solid 2px rgba(33, 32, 32, 0.486);
     border-radius: 20px;
     backdrop-filter: blur(20px);
-    max-width: 1800px;
+    max-width: 1600px;
     height: auto;
     padding: 25px;
     margin: 50px;
+    
+    
     
   
 }
@@ -46,13 +48,16 @@
     
 }
 
+
 #topic-bottom{
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 #topic-bottom>*{
-    margin: 0 15px;
+    margin: 15px;
 }
 
 .post{
@@ -68,10 +73,12 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    
 }
 
 .post-bottom>*{
-    margin: 0 15px;
+    margin: 15px;
 }
 
 .selections{
